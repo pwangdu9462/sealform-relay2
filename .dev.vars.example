@@ -1,0 +1,3 @@
+# Where decrypted responses go: your Zapier "Catch Hook", Make, Slack incoming
+# webhook, or your own https endpoint.
+WEBHOOK_URL=

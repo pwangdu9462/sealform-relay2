@@ -1,0 +1,25 @@
+{
+  "name": "sealform-relay2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "node --test src/crypto.test.ts src/format.test.ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "private": "true",
+  "dependencies": {
+    "@noble/ciphers": "^2.4.0",
+    "@noble/curves": "^2.4.0",
+    "@noble/hashes": "^2.4.0"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "^5.20260928.1",
+    "libsodium-wrappers-sumo": "^0.8.4",
+    "typescript": "^7.0.2",
+    "wrangler": "^4.143.0"
+  }
+}

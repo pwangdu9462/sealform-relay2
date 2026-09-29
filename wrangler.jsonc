@@ -1,0 +1,17 @@
+{
+  // SealForm relay. Runs in YOUR Cloudflare account and makes its own key on
+  // first start (kept in the RelayKeys Durable Object). Set WEBHOOK_URL.
+  "name": "sealform-relay2",
+  "main": "src/index.ts",
+  "compatibility_date": "2026-09-01",
+  "workers_dev": true,
+  "observability": { "enabled": false },
+  "durable_objects": { "bindings": [{ "name": "KEYS", "class_name": "RelayKeys" }] },
+  "migrations": [{ "tag": "v1", "new_sqlite_classes": ["RelayKeys"] }],
+  "vars": {
+    // Leave as is. Only change for a self-hosted SealForm.
+    "SEALFORM_ORIGIN": "https://sealform.co",
+    // Leave empty in production. For local testing, paste the key SealForm shows.
+    "SEALFORM_PUBLIC_KEY": "/wKM6LW0DJHI/DBBqcipAqPsYlSh41vPg5b4GpvPRLI="
+  }
+}
